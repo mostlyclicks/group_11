@@ -4,12 +4,14 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 	body {border:3px solid blue;}
+	#dllk-header, #rossi-header {height:350px;}
 
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 	body {border:3px solid red;}
+	#dllk-header, #rossi-header {height:400px;}
 }
 
 // Large devices (desktops, 992px and up)
@@ -17,6 +19,7 @@
 	body {border:3px solid green;}
 
 	.home-brand {height:400px;}
+	#dllk-header, #rossi-header {height:500px;}
 
 }
 

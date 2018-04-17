@@ -30,8 +30,30 @@
 #group-home-dlllk {
 	background-image: url(/assets/HOME_IMG_4.jpg);
 	background-size:cover;
-
 }
+
+#dllk-header, #rossi-header {
+	height:250px;
+	background-size: cover;
+	background-position-y:50%;
+	background-position-x:50%;
+}
+
+#dllk-header {background-image:url(/assets/HOME_IMG_6.jpg);}
+#rossi-header {background-image:url(/assets/HOME_SLIDER_3.png)}
+
+#rossi-tri, #dllk-tri {
+	margin:50px 0px;
+	.card {
+		margin:15px 0px;
+		border-radius: 0px;
+	}
+}
+
+.nav-item {
+	text-transform: uppercase;
+}
+
 
 footer {
 	background-color:#f1f1f1;
