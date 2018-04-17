@@ -1,9 +1,15 @@
-#home-group-logo {
-	padding:2rem;
+button.navbar-toggler {
+	border:none;
 }
 
-#home-welcome-text p {
-	padding:1rem;
+#home-group-logo {
+
+	padding:3.5rem 0rem 1rem 0rem;
+}
+
+#home-welcome-text {
+	padding-bottom:50px;
+	p {padding:1rem;}
 }
 
 
@@ -34,9 +40,10 @@
 }
 
 footer {
-	background-color:#f1f1f1;
-	border-top:1px solid #cdcdcd;
 	padding:.5rem;
 	position: relative;
 	bottom:0;
+	font-size:12px;
+	color:#cdcdcd;
+
 }
