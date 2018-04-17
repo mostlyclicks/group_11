@@ -5,7 +5,7 @@
 @media (min-width: 576px) {
 
 
-	body {border:3px solid blue;}
+	body {border-top:3px solid blue;}
 	#dllk-header, #rossi-header {height:350px;}
 
 
@@ -13,7 +13,7 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	body {border:3px solid red;}
+	body {border-top:3px solid red;}
 	footer {position:fixed;}	
 	#dllk-header, #rossi-header {height:400px;}
 

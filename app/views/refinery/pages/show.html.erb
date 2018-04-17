@@ -1,1 +1,36 @@
-<%= render '/refinery/content_page' %>
+<section id="l3-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md">
+				<h4><%= @page.title %></h4>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="show-body">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<%= raw @page.content_for(:body) %>
+			</div>
+			<div class="col-md-3">
+				<% @current_page_id = @page.parent_id %>	
+				<%= sub_nav(@page.title, @page.parent_id, @current_page_id) %>
+			</div>
+		</div>
+		
+	</div>
+</section>
+
+
+<script>
+	var listLinks = document.querySelectorAll('.nav-item a');  
+  for (i = 0; i < listLinks.length; i++) {
+  	listLinks[i].classList.add('nav-link');
+  } 
+</script>
+
+
+
+<%#= render '/refinery/content_page' %>

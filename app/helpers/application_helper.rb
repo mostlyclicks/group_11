@@ -44,4 +44,20 @@ module ApplicationHelper
 	end
 
 
+	def sub_nav(page_title, parent_id, current_page_id)
+		sub_nav = Refinery::Menu.new(refinery_menu_pages.select{ |item| item.parent_id == current_page_id })
+		sub_nav = Refinery::Pages::MenuPresenter.new(sub_nav, self)
+		sub_nav.menu_role = 'navigation'
+	  sub_nav.menu_tag = "div"
+	  sub_nav.css =  ""
+	  # sub_nav.dom_id = "navbarSupportedContent"
+	  sub_nav.list_tag = "ul"
+	  sub_nav.list_tag_css = "nav flex-column"
+	  sub_nav.list_item_tag = "li class=\"nav-item\""
+	  sub_nav.selected_css = "active"
+	  sub_nav.max_depth = 0
+	  sub_nav.to_html
+	end
+
+
 end

@@ -1,3 +1,11 @@
+$mon-font: 'Montserrat', sans-serif;
+
+h1, h2, h3, h4 {font-family:$mon-font;font-weight:900;}
+p, li {font-family:$mon-font;font-weight:400;}
+
+
+
+
 button.navbar-toggler {
 	border:none;
 }
@@ -58,6 +66,21 @@ button.navbar-toggler {
 
 .nav-item {
 	text-transform: uppercase;
+}
+
+#l3-header {
+	margin-top:40px;
+	margin-bottom:40px;
+	.container {border-bottom:1px solid #040404;}
+}
+
+#l3-body {
+	.card {border:1px solid transparent;}
+	.card-text {
+		padding:1.5rem;
+		font-size:14px;
+	}
+
 }
 
 
