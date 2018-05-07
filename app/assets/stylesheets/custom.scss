@@ -1,6 +1,7 @@
 $mon-font: 'Montserrat', sans-serif;
 
-h1, h2, h3, h4 {font-family:$mon-font;font-weight:900;}
+h1, h2, h3, h4 {font-family:$mon-font !important;font-weight:700 !important;}
+/*h1 {font-family:$mon-font !important;font-weight:700;}*/
 p, li {font-family:$mon-font;font-weight:400;}
 
 
