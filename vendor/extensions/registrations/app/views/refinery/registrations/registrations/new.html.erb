@@ -2,116 +2,177 @@
   <div class='registrations'>
     <%=raw @page.content_for(Refinery::Pages.default_parts.first[:slug].to_sym) %>
 
-    <%= form_for [refinery, :registrations, @registration] do |f| %>
+    <%= form_for [refinery, :registrations, @registration], html: {class: ''} do |f| %>
       <%= render '/refinery/admin/error_messages',
                  :object => @registration,
                  :include_object_name => true  %>
 
-      <div class='field full_name_field string_field'>
+      <div class='form-group field full_name_field string_field'>
         <%= f.label :full_name %>
-        <%= f.text_field :full_name %>
+        <%= f.text_field :full_name, class: 'form-control' %>
       </div>
 
-      <div class='field email_address_field string_field'>
+      <div class='form-group field email_address_field string_field'>
         <%= f.label :email_address %>
-        <%= f.text_field :email_address %>
+        <%= f.text_field :email_address, class: 'form-control' %>
       </div>
 
-      <div class='field phone_number_field string_field'>
+      <div class='form-group field phone_number_field string_field'>
         <%= f.label :phone_number %>
-        <%= f.text_field :phone_number %>
+        <%= f.text_field :phone_number, class: 'form-control' %>
       </div>
 
-      <div class='field ussa_number_field string_field'>
-        <%= f.label :ussa_number %>
-        <%= f.text_field :ussa_number %>
+      <div class='form-group field ussa_number_field string_field'>
+        <%= f.label :ussa_number, 'USSA number' %>
+        <%= f.text_field :ussa_number, class: 'form-control' %>
       </div>
 
-      <div class='field fis_number_field string_field'>
-        <%= f.label :fis_number %>
-        <%= f.text_field :fis_number %>
+      <div class='form-group field fis_number_field string_field'>
+        <%= f.label :fis_number, 'FIS number' %>
+        <%= f.text_field :fis_number, class: 'form-control' %>
       </div>
 
-      <div class='field street_address_field string_field'>
+      <div class='form-group field street_address_field string_field'>
         <%= f.label :street_address %>
-        <%= f.text_field :street_address %>
+        <%= f.text_field :street_address, class: 'form-control' %>
       </div>
 
-      <div class='field city_field string_field'>
+      <div class='form-group field city_field string_field'>
         <%= f.label :city %>
-        <%= f.text_field :city %>
+        <%= f.text_field :city, class: 'form-control' %>
       </div>
 
-      <div class='field state_field string_field'>
+      <div class='form-group field state_field string_field'>
         <%= f.label :state %>
-        <%= f.text_field :state %>
+        <%= f.text_field :state, class: 'form-control' %>
       </div>
 
-      <div class='field zip_field string_field'>
+      <div class='form-group field zip_field string_field'>
         <%= f.label :zip %>
-        <%= f.text_field :zip %>
+        <%= f.text_field :zip, class: 'form-control' %>
       </div>
 
-      <div class='field athlete_previous_sponsorship_level_field radio_field'>
-        <%= f.label :athlete_previous_sponsorship_level %>
-        <% Refinery::Registrations::Registration::ATHLETE_PREVIOUS_SPONSORSHIP_LEVELS.each do |value, name| %>
-          <%= f.radio_button :athlete_previous_sponsorship_level, (name || value), :value => value %>
-          <%= f.label :"athlete_previous_sponsorship_level_#{(name || value)}", value.humanize %>
-        <% end %>
+
+
+      <ul class="nav nav-tabs" id="athlete-coach-tab" role="tablist" style="margin-bottom:20px;">
+        <li class="nav-item active">
+          <a data-toggle="tab" class="nav-link active" href="#for-athletes" role="tab" aria-controls="athlete" aria-selected="true" id="athlete-tab">For Athletes</a>
+        </li>
+        <li class="nav-item">
+          <a data-toggle="tab" class="nav-link" href="#for-coaches" role="tab" aria-controls="coach" aria-selected="false" id="coach-tab">For Coaches</a>
+        </li>
+      </ul>
+
+
+
+      <div class="tab-content">
+
+      <div id="for-athletes" class="tab-pane active" role="tabpanel" aria-labelledby="athlete-tab">
+        <div class='form-group field athlete_previous_sponsorship_level_field radio_field'>
+          <%= f.label :athlete_previous_sponsorship_level, 'Previous Sponsorship Level' %>
+          <% Refinery::Registrations::Registration::ATHLETE_PREVIOUS_SPONSORSHIP_LEVELS.each do |value, name| %>
+            <br />
+            <%= f.radio_button :athlete_previous_sponsorship_level, (name || value), :value => value %>
+            <%= f.label :"athlete_previous_sponsorship_level_#{(name || value)}", value.humanize %>
+          <% end %>
+        </div>
+
+        <div id="prev-brand" class='form-group field athlete_previous_sponsorship_brand_field radio_field'>
+          <%= f.label :athlete_previous_sponsorship_brand, 'Previous Sponsorship Brand' %> 
+          <% Refinery::Registrations::Registration::ATHLETE_PREVIOUS_SPONSORSHIP_BRANDS.each do |value, name| %>
+            <br />
+            <%= f.radio_button :athlete_previous_sponsorship_brand, (name || value), :value => value, id: 'prev-brand-options' %>
+            <%= f.label :"athlete_previous_sponsorship_brand_#{(name || value)}", value.humanize %>
+          <% end %>
+        </div>
+
+        <div id="other-brand" class='form-group field athlete_previous_sponsorship_brand_other_field string_field'>
+          <%= f.label :athlete_previous_sponsorship_brand_other, 'Previous Sponsorship Brand',id: 'other-brand' %><br />
+          <small>If you selected "Other" above, please speciy which brand.</small>
+          <%= f.text_field :athlete_previous_sponsorship_brand_other, class: 'form-control' %>
+        </div>
+
+        <div class='form-group field athlete_team_club_name_field string_field'>
+          <%= f.label :athlete_team_club_name %>
+          <%= f.text_field :athlete_team_club_name, class: 'form-control' %>
+        </div>
+
+        <div class='form-group field athlete_age_group_field string_field'>
+          <%= f.label :athlete_age_group %>
+          <%= f.text_field :athlete_age_group, class: 'form-control' %>
+        </div>
+
+        <div class='form-group field athlete_coach_name_field string_field'>
+          <%= f.label :athlete_coach_name %>
+          <%= f.text_field :athlete_coach_name, class: 'form-control' %>
+        </div>
+
+        <div class='form-group field athlete_preferred_race_center_field string_field'>
+          <%= f.label :athlete_preferred_race_center %>
+          <%= f.text_field :athlete_preferred_race_center, class: 'form-control' %>
+        </div>
       </div>
 
-      <div class='field athlete_previous_sponsorship_brand_field radio_field'>
-        <%= f.label :athlete_previous_sponsorship_brand %>
-        <% Refinery::Registrations::Registration::ATHLETE_PREVIOUS_SPONSORSHIP_BRANDS.each do |value, name| %>
-          <%= f.radio_button :athlete_previous_sponsorship_brand, (name || value), :value => value %>
-          <%= f.label :"athlete_previous_sponsorship_brand_#{(name || value)}", value.humanize %>
-        <% end %>
+
+      <div id="for-coaches" class="tab-pane fade" role="tabpanel" aria-labelledby="coach-tab">
+        <div class='form-group field coach_team_club_name_field string_field'>
+          <%= f.label :coach_team_club_name %>
+          <%= f.text_field :coach_team_club_name, class: 'form-control' %>
+        </div>
+
+        <div class='form-group field coach_position_field string_field'>
+          <%= f.label :coach_position %>
+          <%= f.text_field :coach_position, class: 'form-control' %>
+        </div>
+
+        <div class='form-group field coach_preferred_race_center_field string_field'>
+          <%= f.label :coach_preferred_race_center %>
+          <%= f.text_field :coach_preferred_race_center, class: 'form-control' %>
+        </div>
       </div>
 
-      <div class='field athlete_previous_sponsorship_brand_other_field string_field'>
-        <%= f.label :athlete_previous_sponsorship_brand_other %>
-        <%= f.text_field :athlete_previous_sponsorship_brand_other %>
       </div>
-
-      <div class='field athlete_team_club_name_field string_field'>
-        <%= f.label :athlete_team_club_name %>
-        <%= f.text_field :athlete_team_club_name %>
-      </div>
-
-      <div class='field athlete_age_group_field string_field'>
-        <%= f.label :athlete_age_group %>
-        <%= f.text_field :athlete_age_group %>
-      </div>
-
-      <div class='field athlete_coach_name_field string_field'>
-        <%= f.label :athlete_coach_name %>
-        <%= f.text_field :athlete_coach_name %>
-      </div>
-
-      <div class='field athlete_preferred_race_center_field string_field'>
-        <%= f.label :athlete_preferred_race_center %>
-        <%= f.text_field :athlete_preferred_race_center %>
-      </div>
-
-      <div class='field coach_team_club_name_field string_field'>
-        <%= f.label :coach_team_club_name %>
-        <%= f.text_field :coach_team_club_name %>
-      </div>
-
-      <div class='field coach_position_field string_field'>
-        <%= f.label :coach_position %>
-        <%= f.text_field :coach_position %>
-      </div>
-
-      <div class='field coach_preferred_race_center_field string_field'>
-        <%= f.label :coach_preferred_race_center %>
-        <%= f.text_field :coach_preferred_race_center %>
-      </div>
-
-      <div class='actions'>
-        <%= f.submit t('.send') %>
+      <hr />
+      <div class='form-group actions'>
+        <%= f.submit t('.send'), class: "btn btn-lg btn-primary" %>
       </div>
     <% end %>
   </div>
 <% end %>
-<%= render '/refinery/content_page' %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <%= render '/refinery/content_page' %>  
+  
+    </div>
+  </div>
+</div>
+
+<script>
+
+  var prevBrandRadios = document.querySelectorAll("#prev-brand-options");
+  console.log(prevBrandRadios.length);
+  // var otherBrand = document.getElementById('other-brand');
+  // var otherPrevBrand = document.getElementById('other-prev-brand');
+  // otherBrand.style.display = "none";
+
+  // otherPrevBrand.addEvenListener('checked', hideOtherBrand);
+
+  // function hideOtherBrand() {
+  //   otherBrand.style.display = "inline";
+  // }
+
+  // console.log(otherPrevBrand);
+  // $('#athlete-coach-tab a').on('click', function (e) {
+  // e.preventDefault()
+  // $(this).tab('show')
+// })
+
+
+
+
+</script>  
+
+

@@ -18,9 +18,9 @@ module Refinery
       # We have validated the first string field for you.
       validates :full_name, :presence => true
 
-      ATHLETE_PREVIOUS_SPONSORSHIP_LEVELS = []
+      ATHLETE_PREVIOUS_SPONSORSHIP_LEVELS = ['platinum', 'gold', 'silver', 'bronze']
 
-      ATHLETE_PREVIOUS_SPONSORSHIP_BRANDS = []
+      ATHLETE_PREVIOUS_SPONSORSHIP_BRANDS = ['Rossignol', 'Dynastar', 'Other']
     end
   end
 end
