@@ -74,3 +74,4 @@ gem 'refinerycms-forms', git: 'https://github.com/refinery/refinerycms-forms', b
 
 
 #rails generate refinery:form registration full_name:string email_address:string phone_number:string ussa_number:string fis_number:string street_address:string city:string state:string zip:string athlete_previous_sponsorship_level:radio athlete_previous_sponsorship_brand:radio athlete_previous_sponsorship_brand_other:string athlete_team_club_name:string athlete_age_group:string athlete_coach_name:string athlete_preferred_race_center:string coach_team_club_name:string coach_position:string coach_preferred_race_center:string
+gem 'refinerycms-registrations', path: 'vendor/extensions'
