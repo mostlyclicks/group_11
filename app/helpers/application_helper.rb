@@ -15,7 +15,7 @@ module ApplicationHelper
 	end
 
 	def menu_picker(page_title, parent_id, page_root_id)
-		if page_title == "Home"
+		if page_title == "Home" || page_title == "Athlete/Coach Registration"
 			main_menu = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self)
 	    main_menu.menu_role = 'navigation'
 	    main_menu.menu_tag = "div"
