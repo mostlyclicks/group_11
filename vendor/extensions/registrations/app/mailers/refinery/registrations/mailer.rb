@@ -5,7 +5,7 @@ module Refinery
       def confirmation(registration, request)
         @registration = registration
         mail :subject  => Refinery::Registrations::Setting.confirmation_subject,
-             :to       => registration.email,
+             :to       => registration.email_address,
              :from     => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>",
              :reply_to => Refinery::Registrations::Setting.notification_recipients.split(',').first
       end
