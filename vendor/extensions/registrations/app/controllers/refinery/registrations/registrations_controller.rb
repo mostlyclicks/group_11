@@ -26,7 +26,7 @@ module Refinery
             logger.warn "There was an error delivering the registration notification.\n#{e.message}\n"
           end
 
-          if Registration.column_names.map(&:to_s).include?('email')
+          if Registration.column_names.map(&:to_s).include?('email_address')
             begin
               Mailer.confirmation(@registration, request).deliver_now
             rescue => e
