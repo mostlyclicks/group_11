@@ -10,10 +10,10 @@ module Refinery
         end
 
         def update
-            flash[:notice] = t('refinery.crudify.updated', :what => @setting.name.gsub("registration_", "").titleize)
+            flash[:notice] = t('refinery.crudify.updated', what: @setting.name.gsub("registration_", "").titleize)
 
             if request.xhr? or from_dialog?
-              render :text => "<script type='text/javascript'>parent.window.location = '#{refinery.registrations_admin_registrations_path}';</script>"
+              render html: "<script type='text/javascript'>parent.window.location = '#{refinery.registrations_admin_registrations_path}';</script>".html_safe
             else
               redirect_back_or_default(refinery.registrations_admin_registrations_path)
             end
