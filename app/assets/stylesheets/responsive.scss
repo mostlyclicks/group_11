@@ -5,7 +5,7 @@
 @media (min-width: 576px) {
 
 
-	body {border-top:3px solid blue;}
+	/*body {border-top:3px solid blue;}*/
 	#dllk-header, #rossi-header {height:350px;}
 
 
@@ -13,7 +13,7 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	body {border-top:3px solid red;}
+	/*body {border-top:3px solid red;}*/
 	footer {position:fixed;}	
 	#dllk-header, #rossi-header {height:400px;}
 
@@ -21,7 +21,7 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	body {border-top:3px solid green;}
+	/*body {border-top:3px solid green;}*/
 
 	.home-brand {height:400px;}
 	#dllk-header, #rossi-header {height:500px;}
@@ -31,7 +31,7 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-	body {border-top:3px solid purple;}
+	/*body {border-top:3px solid purple;}*/
 
 	.home-brand {height:500px;}
 
