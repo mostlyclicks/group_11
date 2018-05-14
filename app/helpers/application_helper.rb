@@ -10,7 +10,7 @@ module ApplicationHelper
 		elsif page.title == "Rossignol" || page.root.title == "Rossignol"
 		 	 link_to (image_tag "Rossignol_Line_RED.png", class: "navbar-brand",alt: "Group Athlete / Rossignol", width: "200"), "/rossignol"
 		elsif page.title == "DLLK" || page.root.title == "DLLK"
-			 link_to (image_tag "Logo_Dynastar_15_horizontal.png", class: "navbar-brand",alt: "Group Athlete / DLLK", width: "150"), "/dllk"
+			 link_to (image_tag "LOGO_DYNASTAR_HORIZONTAL.png", class: "navbar-brand",alt: "Group Athlete / DLLK", width: "150"), "/dllk"
 		end
 	end
 
