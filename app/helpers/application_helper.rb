@@ -5,7 +5,7 @@ module ApplicationHelper
 	end
 
 	def logo_picker(page)
-		if page_title == "Home" || page_title == "Athlete/Coach Application"
+		if page_title == "Home" || page_title == "Sponsorship Request"
 			link_to (image_tag "Logo_GROUPE_2016.png", class: "navbar-brand",alt: "Group Athlete", width: "200"), refinery.root_path
 		elsif page.title == "Rossignol" || page.root.title == "Rossignol"
 		 	 link_to (image_tag "Rossignol_Line_RED.png", class: "navbar-brand",alt: "Group Athlete / Rossignol", width: "200"), "/rossignol"
@@ -15,7 +15,7 @@ module ApplicationHelper
 	end
 
 	def menu_picker(page_title, parent_id, page_root_id)
-		if page_title == "Home" || page_title == "Athlete/Coach Registration"
+		if page_title == "Home" || page_title == "Sponsorship Request"
 			main_menu = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self)
 	    main_menu.menu_role = 'navigation'
 	    main_menu.menu_tag = "div"
