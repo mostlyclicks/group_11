@@ -3,6 +3,7 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+	body {border-top:none;}
 	#dllk-header, #rossi-header {height:350px;}
 }
 
