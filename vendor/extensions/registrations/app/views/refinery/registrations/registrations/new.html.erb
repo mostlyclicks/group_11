@@ -8,24 +8,24 @@
                  :object => @registration,
                  :include_object_name => true  %>
 
-      <div class='form-group field full_name_field string_field'>
+      <div class='form-group required field full_name_field string_field'>
         <%= f.label :full_name %>
-        <%= f.text_field :full_name, class: 'form-control' %>
+        <%= f.text_field :full_name, class: 'form-control', required: true %>
       </div>
 
-      <div class='form-group field email_address_field string_field'>
+      <div class='form-group required field email_address_field string_field'>
         <%= f.label :email_address %>
-        <%= f.text_field :email_address, class: 'form-control' %>
+        <%= f.text_field :email_address, class: 'form-control', required: true %>
       </div>
 
-      <div class='form-group field phone_number_field string_field'>
+      <div class='form-group required field phone_number_field string_field'>
         <%= f.label :phone_number %>
-        <%= f.text_field :phone_number, class: 'form-control' %>
+        <%= f.text_field :phone_number, class: 'form-control', required: true %>
       </div>
 
-      <div class='form-group field ussa_number_field string_field'>
+      <div class='form-group required field ussa_number_field string_field'>
         <%= f.label :ussa_number, 'USSA number' %>
-        <%= f.text_field :ussa_number, class: 'form-control' %>
+        <%= f.text_field :ussa_number, class: 'form-control', required: true %>
       </div>
 
       <div class='form-group field fis_number_field string_field'>
@@ -93,19 +93,19 @@
           <%= f.text_field :athlete_previous_sponsorship_brand_other, class: 'form-control' %>
         </div>
 
-        <div class='form-group field athlete_team_club_name_field string_field'>
+        <div class='form-group required field athlete_team_club_name_field string_field'>
           <%= f.label :athlete_team_club_name %>
-          <%= f.text_field :athlete_team_club_name, class: 'form-control' %>
+          <%= f.text_field :athlete_team_club_name, class: 'form-control', required: true %>
         </div>
 
-        <div class='form-group field athlete_age_group_field string_field'>
+        <div class='form-group required field athlete_age_group_field string_field'>
           <%= f.label :athlete_age_group %>
-          <%= f.text_field :athlete_age_group, class: 'form-control' %>
+          <%= f.text_field :athlete_age_group, class: 'form-control', required: true %>
         </div>
 
-        <div class='form-group field athlete_coach_name_field string_field'>
+        <div class='form-group required field athlete_coach_name_field string_field'>
           <%= f.label :athlete_coach_name %>
-          <%= f.text_field :athlete_coach_name, class: 'form-control' %>
+          <%= f.text_field :athlete_coach_name, class: 'form-control', required: true %>
         </div>
 
         <div class='form-group field athlete_preferred_race_center_field string_field'>

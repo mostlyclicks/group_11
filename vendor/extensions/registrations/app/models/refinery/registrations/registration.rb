@@ -17,6 +17,12 @@ module Refinery
       # Add some validation here if you want to validate the user's input
       # We have validated the first string field for you.
       validates :full_name, :presence => true
+      validates :email_address, :presence => true
+      validates :phone_number, :presence => true
+      validates :ussa_number, :presence => true
+      validates :athlete_team_club_name, :presence => true
+      validates :athlete_age_group, :presence => true
+      validates :athlete_coach_name, :presence => true
 
       ATHLETE_PREVIOUS_SPONSORSHIP_LEVELS = ['platinum', 'gold', 'silver', 'bronze', 'none']
 

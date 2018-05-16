@@ -89,3 +89,9 @@ footer {
 	color:#cdcdcd;
 
 }
+
+.required label:after {
+    content: " *";
+    color:red;
+ 
+}
