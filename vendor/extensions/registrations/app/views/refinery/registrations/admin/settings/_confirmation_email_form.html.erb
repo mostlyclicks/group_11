@@ -40,7 +40,7 @@
         <%= label_tag "setting[message[#{locale.to_s}]]", t('.message'), :class => 'stripped' %>
       </td>
       <td>
-        <%= text_area_tag "setting[message[#{locale.to_s}]]", Refinery::Registrations::Setting.confirmation_message[locale].to_s, :rows => "7", :class => 'widest' %>
+        <%= text_area_tag "setting[message[#{locale.to_s}]]", Refinery::Registrations::Setting.confirmation_message[locale.to_s], :rows => "7", :class => 'widest' %>
         <br/>
         <em><%= t('.note') %></em>
       </td>
