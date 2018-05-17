@@ -1,4 +1,3 @@
-<%#= simple_format(strip_tags(Refinery::Registrations::Setting.confirmation_message.gsub("%name%", @registration.name))) %>
-<%#= simple_format(strip_tags(Refinery::Registrations::Setting.confirmation_message)) %>
+<%= simple_format(strip_tags(Refinery::Registrations::Setting.confirmation_message.gsub("%name%", @registration.full_name))) %>
 
-<%= Refinery::Registrations::Setting.confirmation_message %>
+
