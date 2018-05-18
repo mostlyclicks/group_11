@@ -43,7 +43,7 @@ button.navbar-toggler {
 	background-size:cover;
 }
 
-#dllk-header, #rossi-header {
+#dllk-header, #rossi-header, #home-header {
 	height:250px;
 	background-size: cover;
 	background-position-y:50%;
@@ -52,6 +52,10 @@ button.navbar-toggler {
 
 #dllk-header {background-image:url(/assets/Dynastar_Homepage_Header.jpg);}
 #rossi-header {background-image:url(/assets/HOME_SLIDER_3.png)}
+#home-header {background-image:url(/assets/Dynastar_Homepage_Header.jpg);
+							height:400px;
+							margin-bottom:50px;
+							}
 
 #rossi-tri, #dllk-tri {
 	margin:50px 0px;
