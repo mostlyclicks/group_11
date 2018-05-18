@@ -9,6 +9,11 @@ GIT
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-contacts (1.0.0)
+      actionmailer
+      filters_spam (~> 0.3)
+      refinerycms-core (~> 4.0.1)
+      refinerycms-settings (~> 4.0.0)
     refinerycms-registrations (1.0.0)
       actionmailer
       filters_spam (~> 0.3)
@@ -324,6 +329,7 @@ DEPENDENCIES
   rails (~> 5.1.4)
   refinerycms-acts-as-indexed (~> 3.0, >= 3.0.0)
   refinerycms-authentication-devise (~> 2.0.0)
+  refinerycms-contacts!
   refinerycms-core
   refinerycms-forms!
   refinerycms-images

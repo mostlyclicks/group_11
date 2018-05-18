@@ -10,3 +10,5 @@
 Refinery::Pages::Engine.load_seed
 
 Refinery::Registrations::Engine.load_seed
+
+Refinery::Contacts::Engine.load_seed
