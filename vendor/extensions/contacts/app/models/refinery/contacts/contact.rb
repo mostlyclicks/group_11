@@ -12,7 +12,7 @@ module Refinery
       # We have validated the first string field for you.
       validates :full_name, :presence => true
 
-      DISCIPLINES = []
+      DISCIPLINES = ["ALPINE", "FREESTYLE", "NORDIC"]
     end
   end
 end
