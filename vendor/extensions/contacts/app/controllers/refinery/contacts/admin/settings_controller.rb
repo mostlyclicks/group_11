@@ -10,10 +10,10 @@ module Refinery
         end
 
         def update
-            flash[:notice] = t('refinery.crudify.updated', :what => @setting.name.gsub("contact_", "").titleize)
+            flash[:notice] = t('refinery.crudify.updated', what: @setting.name.gsub("contact_", "").titleize)
 
             if request.xhr? or from_dialog?
-              render :text => "<script type='text/javascript'>parent.window.location = '#{refinery.contacts_admin_contacts_path}';</script>"
+              render html: "<script type='text/javascript'>parent.window.location = '#{refinery.contacts_admin_contacts_path}';</script>".html_safe
             else
               redirect_back_or_default(refinery.contacts_admin_contacts_path)
             end
