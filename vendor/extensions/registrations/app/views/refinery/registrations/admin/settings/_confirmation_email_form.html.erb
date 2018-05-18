@@ -28,7 +28,7 @@
         <%= label_tag "setting[subject[#{locale.to_s}]]", t('.subject'), :class => 'stripped' %>
       </td>
       <td>
-        <%= text_field_tag "setting[subject[#{locale.to_s}]]", Refinery::Registrations::Setting.confirmation_subject[locale.to_s].to_s, :class => 'widest' %>
+        <%= text_field_tag "setting[subject[#{locale.to_s}]]", Refinery::Registrations::Setting.confirmation_subject[locale.to_s], :class => 'widest' %>
       </td>
     </tr>
     <tr>
