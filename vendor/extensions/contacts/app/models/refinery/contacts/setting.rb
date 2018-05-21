@@ -20,7 +20,7 @@ module Refinery
 
         def notification_subject
           Refinery::Setting.find_or_set(:contact_notification_subject,
-                                        "New contact from your website")
+                                        "New contact from GroupAthlete.com")
         end
 
         def confirmation_message=(value)
