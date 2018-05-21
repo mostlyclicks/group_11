@@ -26,7 +26,7 @@ module Refinery
             logger.warn "There was an error delivering the contact notification.\n#{e.message}\n"
           end
 
-          if Contact.column_names.map(&:to_s).include?('email')
+          if Contact.column_names.map(&:to_s).include?('email_address')
             begin
               Mailer.confirmation(@contact, request).deliver_now
             rescue => e
