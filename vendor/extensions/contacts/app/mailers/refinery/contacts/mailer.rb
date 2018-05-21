@@ -4,7 +4,7 @@ module Refinery
 
       def confirmation(contact, request)
         @contact = contact
-        mail :subject  => Refinery::Contacts::Setting.confirmation_subject,
+        mail :subject  => Refinery::Contacts::Setting.confirmation_subject[locale.to_s],
              :to       => contact.email_address,
              :from     => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>",
              :reply_to => Refinery::Contacts::Setting.notification_recipients.split(',').first
