@@ -15,7 +15,7 @@ module ApplicationHelper
 	end
 
 	def menu_picker(page_title, parent_id, page_root_id)
-		if page_title == "Home2" || page_title == "Sponsorship Request"
+		if page_title == "Home2"
 			main_menu = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self)
 	    main_menu.menu_role = 'navigation'
 	    main_menu.menu_tag = "div"
@@ -27,6 +27,8 @@ module ApplicationHelper
 	    main_menu.selected_css = "active"
 	    main_menu.max_depth = 0
 	    main_menu.to_html
+	  elsif page_title == "Sponsorship Request"
+	  	main_menu = nil
 		elsif page_title == page_title || page_root_id == parent_id
 			sub_menu = Refinery::Menu.new(refinery_menu_pages.select{ |item| item.parent_id == page_root_id })
 			sub_menu = Refinery::Pages::MenuPresenter.new(sub_menu, self)
