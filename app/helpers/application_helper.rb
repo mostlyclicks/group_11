@@ -5,7 +5,7 @@ module ApplicationHelper
 	end
 
 	def logo_picker(page)
-		if page_title == "Home" || page_title == "Sponsorship Request" || page_title == "Contacts" || page_title == "Thank you"
+		if page_title == "Home" || page_title == "Sponsorship Request" || page_title == "Contact Us" || page_title == "Thank you"
 			link_to (image_tag "Logo_GROUPE_2016.png", class: "navbar-brand",alt: "Group Athlete", width: "200"), refinery.root_path
 		elsif page.title == "Rossignol Race" || page.root.title == "Rossignol Race"
 		 	 link_to (image_tag "Rossignol_Line_RED.png", class: "navbar-brand",alt: "Group Athlete / Rossignol", width: "200"), "/rossignol"
