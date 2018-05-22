@@ -9,7 +9,7 @@ module Refinery
       # def message was created automatically because you didn't specify a text field
       # when you ran the refinery:form generator. <3 <3 Refinery CMS.
       def message
-        "Override def message in vendor/extensions/registrations/app/models/refinery/registrations/registration.rb"
+        "New registration"
       end
 
       alias_attribute :name, :full_name
