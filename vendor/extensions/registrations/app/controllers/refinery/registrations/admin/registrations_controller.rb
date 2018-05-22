@@ -22,7 +22,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def registration_params
-          params.require(:registration).permit(:full_name, :email_address, :phone_number, :ussa_number, :fis_number, :street_address, :city, :state, :zip, :athlete_previous_sponsorship_level, :athlete_previous_sponsorship_brand, :athlete_previous_sponsorship_brand_other, :athlete_team_club_name, :athlete_age_group, :athlete_coach_name, :athlete_preferred_race_center, :coach_team_club_name, :coach_position, :coach_preferred_race_center, :sponsorship_brand, :notes)
+          params.require(:registration).permit(:full_name, :email_address, :phone_number, :ussa_number, :fis_number, :street_address, :city, :state, :zip, :athlete_previous_sponsorship_level, :athlete_previous_sponsorship_brand, :athlete_previous_sponsorship_brand_other, :athlete_team_club_name, :athlete_birth_year, :athlete_coach_name, :athlete_preferred_race_center, :coach_team_club_name, :coach_position, :coach_preferred_race_center, :sponsorship_brand, :notes)
         end
       end
     end

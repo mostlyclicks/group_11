@@ -21,7 +21,7 @@ module Refinery
       validates :phone_number, :presence => true
       validates :ussa_number, :presence => true
       validates :athlete_team_club_name, :presence => true
-      validates :athlete_age_group, :presence => true
+      validates :athlete_birth_year, :presence => true
       validates :athlete_coach_name, :presence => true
 
       ATHLETE_PREVIOUS_SPONSORSHIP_LEVELS = ['platinum', 'gold', 'silver', 'bronze', 'none']

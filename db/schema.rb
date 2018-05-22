@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180522201835) do
+ActiveRecord::Schema.define(version: 20180522221042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -169,7 +169,7 @@ ActiveRecord::Schema.define(version: 20180522201835) do
     t.string "athlete_previous_sponsorship_brand"
     t.string "athlete_previous_sponsorship_brand_other"
     t.string "athlete_team_club_name"
-    t.string "athlete_age_group"
+    t.string "athlete_birth_year"
     t.string "athlete_coach_name"
     t.string "athlete_preferred_race_center"
     t.string "coach_team_club_name"
