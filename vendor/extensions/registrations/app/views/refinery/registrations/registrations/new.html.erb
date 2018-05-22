@@ -92,6 +92,15 @@
           <%= f.text_field :athlete_previous_sponsorship_brand_other, class: 'form-control' %>
         </div>
 
+        <div id="request-brand" class='form-group field sponsorship_brand_field radio_field'>
+          <%= f.label :sponsorship_brand, 'Requested Sponsorship Brand' %> 
+          <% Refinery::Registrations::Registration::SPONSORSHIP_BRANDS.each do |value, name| %>
+            <br />
+            <%= f.radio_button :sponsorship_brand, (name || value), :value => value, id: 'brand-sponsorship' %>
+            <%= f.label :"sponsorship_brand_#{(name || value)}", value.humanize %>
+          <% end %>
+        </div>        
+
         <div class='form-group required field athlete_team_club_name_field string_field'>
           <%= f.label :athlete_team_club_name %>
           <%= f.text_field :athlete_team_club_name, class: 'form-control', required: true %>
@@ -110,6 +119,11 @@
         <div class='form-group field athlete_preferred_race_center_field string_field'>
           <%= f.label :athlete_preferred_race_center %>
           <%= f.text_field :athlete_preferred_race_center, class: 'form-control' %>
+        </div>
+
+        <div class='form-group field notes_field string_field'>
+          <%= f.label :notes %>
+          <%= f.text_area :notes, class: 'form-control', rows: 5 %>
         </div>
       </div>
 

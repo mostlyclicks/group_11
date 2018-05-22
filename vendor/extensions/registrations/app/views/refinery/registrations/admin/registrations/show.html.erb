@@ -124,6 +124,16 @@
       <tr>
         <td>
           <strong>
+            <%= t('.sponsorship_brand', :default => t('activerecord.attributes.registration.sponsorship_brand')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @registration.sponsorship_brand %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
             <%= t('.athlete_team_club_name', :default => t('activerecord.attributes.registration.athlete_team_club_name')) %>
           </strong>
         </td>
@@ -189,6 +199,16 @@
         </td>
         <td>
           <%= @registration.coach_preferred_race_center %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.notes', :default => t('activerecord.attributes.registration.notes')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @registration.notes %>
         </td>
       </tr>
   </table>
