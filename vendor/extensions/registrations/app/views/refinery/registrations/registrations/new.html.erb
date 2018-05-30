@@ -82,7 +82,7 @@
           <% Refinery::Registrations::Registration::ATHLETE_PREVIOUS_SPONSORSHIP_BRANDS.each do |value, name| %>
             <br />
             <%= f.radio_button :athlete_previous_sponsorship_brand, (name || value), :value => value, id: 'prev-brand-options' %>
-            <%= f.label :"athlete_previous_sponsorship_brand_#{(name || value)}", value.humanize %>
+            <%= f.label :"athlete_previous_sponsorship_brand_#{(name || value)}", value %>
           <% end %>
         </div>
 
@@ -97,7 +97,7 @@
           <% Refinery::Registrations::Registration::SPONSORSHIP_BRANDS.each do |value, name| %>
             <br />
             <%= f.radio_button :sponsorship_brand, (name || value), :value => value, id: 'brand-sponsorship' %>
-            <%= f.label :"sponsorship_brand_#{(name || value)}", value.humanize %>
+            <%= f.label :"sponsorship_brand_#{(name || value)}", value %>
           <% end %>
         </div>        
 

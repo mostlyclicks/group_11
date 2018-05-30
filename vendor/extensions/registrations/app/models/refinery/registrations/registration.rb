@@ -26,9 +26,9 @@ module Refinery
 
       ATHLETE_PREVIOUS_SPONSORSHIP_LEVELS = ['platinum', 'gold', 'silver', 'bronze', 'none']
 
-      ATHLETE_PREVIOUS_SPONSORSHIP_BRANDS = ['Rossignol', 'Dynastar', 'Other']
+      ATHLETE_PREVIOUS_SPONSORSHIP_BRANDS = ['Rossignol', 'Dynastar/Lange', 'Other']
 
-      SPONSORSHIP_BRANDS = ['Rossignol', 'Dynastar']
+      SPONSORSHIP_BRANDS = ['Rossignol', 'Dynastar/Lange']
     end
   end
 end
