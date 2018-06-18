@@ -7,7 +7,7 @@ module ApplicationHelper
 	def logo_picker(page)
 		if page_title == "Home" || page_title == "Sponsorship Request" || page_title == "Contact Us" || page_title == "Thank You"
 			link_to (image_tag "Logo_GROUPE_2016.png", class: "navbar-brand",alt: "Group Athlete", width: "200"), refinery.root_path
-		elsif page.title == "Rossignol Race" || page.root.title == "Rossignol Race"
+		elsif page.title == "Rossignol Race" || page.root.title == "Rossignol Race" || page.root.title == "Rossignol Freeride" || page.root.title == "Rossignol Nordic" 
 		 	 link_to (image_tag "Rossignol_Line_RED.png", class: "navbar-brand",alt: "Group Athlete / Rossignol", width: "200"), "/rossignol"
 		elsif page.title == "DLLK" || page.root.title == "DLLK"
 			 link_to (image_tag "LOGO_DYNASTAR_HORIZONTAL.png", class: "navbar-brand",alt: "Group Athlete / DLLK", width: "150"), "/dllk"
