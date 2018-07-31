@@ -13,10 +13,8 @@ module Refinery
           else
             find_all_registrations
           end
-
           @grouped_registrations = group_by_date(@registrations)
         end
-
 
         private
 

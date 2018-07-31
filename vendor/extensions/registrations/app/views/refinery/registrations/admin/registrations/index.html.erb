@@ -2,3 +2,28 @@
 <section id='records'>
   <%= render 'records' %>
 </section>
+
+<% @registrations.each do |r| %>
+  <%= r.full_name %>,
+  <%= r.email_address %>,
+  <%= r.phone_number %>,
+  <%= r.ussa_number %>,
+  <%= r.fis_number %>,
+  <%= r.street_address %>,
+  <%= r.city %>,
+  <%= r.state %>,
+  <%= r.zip %>,
+  <%= r.athlete_previous_sponsorship_level %>,
+  <%= r.athlete_previous_sponsorship_brand %>,
+  <%= r.athlete_previous_sponsorship_brand_other %>,
+  <%= r.athlete_team_club_name %>,
+  <%= r.athlete_birth_year %>,
+  <%= r.athlete_coach_name %>,
+  <%= r.athlete_preferred_race_center %>,
+  <%= r.coach_team_club_name %>,
+  <%= r.coach_position %>,
+  <%= r.coach_preferred_race_center %>,
+  <%= r.sponsorship_brand %>,
+  <%= r.notes %>
+	<br />
+<% end %> 
