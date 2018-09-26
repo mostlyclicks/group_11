@@ -63,6 +63,24 @@ button.navbar-toggler {
 	padding:20px;
 }
 
+#lang-switcher {
+	position:absolute;
+	top:50px;
+	right:0px;
+	background-color:rgba(255,255,255,.7);
+	color:#ffffff;
+	padding:5px;
+	img {
+		width:50px;
+	}
+	
+	a {
+		color:red;
+		
+	}
+
+}
+
 #rossi-tri, #dllk-tri {
 	margin:50px 0px;
 	.card {

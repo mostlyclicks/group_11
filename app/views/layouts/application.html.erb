@@ -12,6 +12,30 @@
         <%= render "/refinery/header" -%>
       </header>
       <main id="page" role="main">
+
+      <div id="lang-switcher">
+
+         <% ::Refinery::I18n.frontend_locales.each do |locale| %>
+           <% if locale.to_s == 'en' %>
+              <% @locale = 'US_EN' %>
+            <% elsif locale.to_s == 'en-CA' %>
+              <% @locale = 'CA_EN' %>
+            <% elsif locale.to_s == 'fr-CA' %>
+              <% @locale = 'CA_FR' %>
+            <% elsif locale.to_s == 'fr' %>
+              <% @locale = 'fr'%>
+          <% end %>
+
+          <% if Globalize.locale.to_s != locale.to_s %>
+            <%= Globalize.with_locale(locale) { link_to (image_tag "/assets/" + @locale + "_sm.png"), refinery.url_for(@page.url) unless @locale == 'fr' } %>
+            
+          <% else %>
+            <%= image_tag "/assets/" + @locale + "_sm.png", style: 'opacity:.5;'  %>
+          <% end %>
+        <% end %>
+      
+      </div>
+
         <%= yield %>
       </main>
       <footer role="contentinfo" class="container-fluid bg-light">
